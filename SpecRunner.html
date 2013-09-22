@@ -15,7 +15,7 @@
 
   <!-- include helper files here... -->
   <script type="text/javascript" src="helper/random_number_helper.js"></script>
-
+  <script type="text/javascript" src="helper/page_control_helper.js"></script>
   <!-- include source files here... -->
 
   <script type="text/javascript" src="src/compare.js"></script>
@@ -25,6 +25,8 @@
   <!-- include spec files here... -->
   <script type="text/javascript" src="spec/random_number_test.js"></script>
   <script type="text/javascript" src="spec/compare_test.js"></script>
+  <script type="text/javascript" src="spec/page_control_test.js"></script>
+
 
 
 
@@ -62,13 +64,35 @@
 
 <body>
 
---<h1>猜数字游戏</h1>
+<!--<h1>猜数字游戏</h1>
+<button class="btn btn-large btn-primary" type="button"  onclick="start_games()">开始游戏</button>
+</br> </br>
 <p1 id = "start"> </p1>
 <input id="input1" type="text"  value ="">
-<button class="btn btn-large btn-primary" type="button" onclick="start_games()">开始游戏</button>
-<input id="output" type="text">
+</br> </br>
 <button class="btn btn-large btn-primary"  type="button" onclick="run_game();">查看结果</button>
-<script type="text/javascript" src="spec/page_control_test.js"></script>
+<input id="output" type="text" readonly="readonly">
+</br> </br>
+<p1>提示信息如下:</p1>
+<input id="prompt" type="text" size="50" onfocus="blur()"/>   -->
+
+
+<h1>猜数字游戏</h1>
+<p1>每次开始游戏之前，请先点击“开始游戏“.</p1>
+<p1>每次点击"开始游戏"，系统产生新的随机数</p1></br> </br>
+<button class="btn btn-large btn-primary" type="button"  onclick="start_games()">开始游戏</button>
+</br> </br>
+<p1 id = "start"> </p1>
+<input id="input1" type="text"  value ="">
+<script>
+    document.getElementById("input1").disabled=true;
+</script>
+</br> </br>
+<button class="btn btn-large btn-primary"  type="button" onclick="run_game();">查看结果</button>
+<input id="output" type="text" readonly="readonly">
+</br> </br>
+<p1>提示信息如下:</p1>
+<input id="prompt" type="text" size="50" readonly="readonly"/>
 
 </body>
 </html>
